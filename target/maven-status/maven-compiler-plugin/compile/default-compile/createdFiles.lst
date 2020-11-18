@@ -1,7 +1,0 @@
-com\netty\client\EchoClient$1.class
-com\netty\server\EchoServer$1.class
-com\netty\Netty.class
-com\netty\server\EchoServer.class
-com\netty\client\EchoClientHandler.class
-com\netty\server\EchoServerHandler.class
-com\netty\client\EchoClient.class
