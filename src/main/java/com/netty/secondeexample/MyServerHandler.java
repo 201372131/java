@@ -13,7 +13,7 @@ import java.util.UUID;
 public class MyServerHandler extends SimpleChannelInboundHandler<String> {
 
     /**
-    * @Description:
+    * @Description: 如果有请求消息，该方法就会被调用
     * @Param: [ctx：上下文，可以获取远程地址等, msg:接收的请求的对象]
     * @Author: ljw
     * @Date: 2020/11/11

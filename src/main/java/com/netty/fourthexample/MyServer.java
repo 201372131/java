@@ -13,7 +13,7 @@ import io.netty.handler.logging.LoggingHandler;
  * @Author ljw
  * @Date 2020/11/11 16:02
  * @Version 1.0
- * 心跳
+ * 心跳检测
  */
 public class MyServer {
     public static void main(String[] args) throws InterruptedException {
@@ -23,8 +23,8 @@ public class MyServer {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             serverBootstrap.group(boosGroup,workerGroup)
                     .channel(NioServerSocketChannel.class)
-                    .handler(new LoggingHandler(LogLevel.INFO))//针对boosGroup
-                    .childHandler(new MyServerInitializer());
+                    .handler(new LoggingHandler(LogLevel.INFO))//针对boosGroup，可以打印日志
+                    .childHandler(new MyServerInitializer());//针对workerGroup处理
 
             ChannelFuture channelFuture = serverBootstrap.bind(8899).sync();
             channelFuture.channel().closeFuture().sync();

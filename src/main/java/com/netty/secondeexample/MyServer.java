@@ -21,13 +21,18 @@ public class MyServer {
      * @throws InterruptedException
      */
     public static void main(String[] args) throws InterruptedException {
-        EventLoopGroup boosGroup = new NioEventLoopGroup();
-        EventLoopGroup workerGroup = new NioEventLoopGroup();
+
+        /**
+         * EventLoopGroup是一个死循环
+         */
+        EventLoopGroup boosGroup = new NioEventLoopGroup();//接收客户端的连接转发给workerGroup
+        EventLoopGroup workerGroup = new NioEventLoopGroup();//处理用户的请求
         try{
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             serverBootstrap.group(boosGroup,workerGroup)
                     .channel(NioServerSocketChannel.class)
                     .childHandler(new MyServerInitializer());
+
             ChannelFuture channelFuture = serverBootstrap.bind(8899).sync();
             channelFuture.channel().closeFuture().sync();
         }finally {

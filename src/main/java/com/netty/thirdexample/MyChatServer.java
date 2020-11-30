@@ -14,6 +14,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  *使用netty连接多个客户端并且相互通信
  */
 public class MyChatServer {
+
     public static void main(String[] args) throws InterruptedException {
         EventLoopGroup boosGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();

@@ -38,4 +38,9 @@ public class Netty {
      * ChannelHandler:
      * 每个ChannelHandler的实例都类似于一种为了响应特定事件而被执行的回调
      */
+
+    /**
+     * 0拷贝：
+     *
+     */
 }

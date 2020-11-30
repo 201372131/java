@@ -11,6 +11,13 @@ import io.netty.handler.timeout.IdleStateEvent;
  */
 public class MyServerHandler extends ChannelInboundHandlerAdapter {
 
+    /**
+    * @Description: 用户事件发生时候回触发该方法调用
+    * @Param: [ctx, evt]
+    * @Author: ljw
+    * @Date: 2020/11/20
+    * @Version: 1.0        
+    */
     @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
         if(evt instanceof IdleStateEvent){
