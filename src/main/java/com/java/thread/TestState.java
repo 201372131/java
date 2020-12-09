@@ -80,6 +80,12 @@ public class TestState {
             e.printStackTrace();
         }
 
+        System.out.println("t1 state:"+t1.getState());
+        System.out.println("t2 state:"+t2.getState());
+        System.out.println("t3 state:"+t3.getState());
+        System.out.println("t4 state:"+t4.getState());
+        System.out.println("t5 state:"+t5.getState());
+        System.out.println("t6 state:"+t6.getState());
         /*log.debug("t1 state {}",t1.getState());
         log.debug("t2 state {}",t2.getState());
         log.debug("t3 state {}",t3.getState());

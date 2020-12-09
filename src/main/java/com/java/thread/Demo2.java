@@ -1,10 +1,12 @@
 package com.java.thread;
 
+
 /**
  * @Author ljw
  * @Date 2020/11/27 14:37
  * @Version 1.0
  */
+
 public class Demo2 {
 
     //@FunctionalInterface  可以用lamda
